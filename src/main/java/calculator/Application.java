@@ -16,15 +16,21 @@ public class Application {
          * 5. 분리된 숫자를 확인하여 음수가 포함되어 있을 경우 IllegalArgumentException을 발생시키는 기능.
          */
 
-        // 1. 문구 출력
+        // Console API를 사용하여 구현
         System.out.println("덧셈할 문자열을 입력해 주세요.");
-
-        // 2. 사용자 입력 받기
         String input = Console.readLine();
 
-        // 3. 현재는 계산 로직이 없으므로 임시 결과 출력
-        // TODO: 여기에 실제 계산 로직을 추가해야 함
-        int result = 0; // 임시 결과값
+        int result = calculateSum(input);
         System.out.println("결과 : " + result);
+    }
+
+    // 계산 로직 메서드
+    public static int calculateSum(String text) {
+        // 빈 문자열 또는 null 처리
+        if (text == null || text.isEmpty()) {
+            return 0;
+        }
+
+        return 0;
     }
 }

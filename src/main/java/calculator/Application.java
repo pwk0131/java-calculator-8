@@ -51,7 +51,11 @@ public class Application {
 
         int sum = 0;
         for (String numberStr : numbers) {
-            sum += Integer.parseInt(numberStr);
+            int number = Integer.parseInt(numberStr);
+            if (number < 0) {
+                throw new IllegalArgumentException("음수는 입력할 수 없습니다.");
+            }
+            sum += number;
         }
 
         return sum;

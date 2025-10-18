@@ -31,6 +31,14 @@ public class Application {
             return 0;
         }
 
-        return 0;
+        // 정규식을 사용하여 , 또는 : 로 분리
+        String[] numbers = text.split(",|:");
+
+        int sum = 0;
+        for (String numberStr : numbers) {
+            sum += Integer.parseInt(numberStr); // 문자열을 정수로 변환하여 더함
+        }
+
+        return sum;
     }
 }
